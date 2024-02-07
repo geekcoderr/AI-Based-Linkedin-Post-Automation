@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Automation-Linkedin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 60px;
+            padding-left: 80px;
+            padding-right: 80px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            color: #333;
+        }
+        h1 {
+            margin-bottom: 30px;
+            font-size: 34px;
+            color: #007bff;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            margin-bottom: 15px;
+            color: #ff9500; /* Change color to blue */
+            font-weight: bold; /* Make text bold */
+            font-size: 18px; /* Increase font size */
+        }
+        select, input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            color: #555; /* Contrasting color */
+        }
+        input[type="submit"] {
+            width: 50%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .message {
+            color: #220202; /* Contrasting color */
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Based Linkedin Post Automation</h1>
+        <form action="/automate" method="post">
+            <label for="prompt_of_user"><b>What topic would you like to POST on :</b></label><br>
+            <input type="text" id="prompt_of_user" name="prompt_of_user" required ><br><br>
+
+            <label for="intention"><b>What shall be the post Intention:</b></label><br>
+            <select id="intention" name="intention" required >
+                <option value="Awareness">Awareness</option>
+                <option value="Marketing">Marketing</option>
+            </select><br><br>
+
+            <label for="post_tenure"><b>What shall be the Post Tenure:</b></label><br>
+            <select id="post_tenure" name="post_tenure" required >
+                <option value="Single Post">Single Post</option>
+                <option value="10 Days">10 Days</option>
+                <option value="15 Days">15 Days</option>
+                <option value="20 Days">20 Days</option>
+                <option value="30 Days">30 Days</option>
+            </select><br><br>
+
+            <input type="submit" value="Automate-POST">
+        </form>
+        <p class="message">Automate your Linkedin Post with Us+AI.</p>
+    </div>
+</body>
+</html>
