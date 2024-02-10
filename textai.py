@@ -9,13 +9,12 @@ from IPython.display import Markdown
 import google.generativeai as genai
 python_file='autoPostLinkedin.py'
 
-# Load environment variables from .env file
+
 load_dotenv()
 
 def to_markdown(text):
     text = text.replace('•', '  *')
     return textwrap.indent(text, '> ')
-# Or use `os.getenv('GOOGLE_API_KEY')` to fetch an environment variable.
 GOOGLE_API_KEY=os.getenv('GOOGLE_API_KEY')
 
 genai.configure(api_key=GOOGLE_API_KEY)

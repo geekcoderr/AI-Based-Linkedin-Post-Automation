@@ -4,7 +4,6 @@ import sys
 import os
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
 load_dotenv()
 
 class ContentTooLong(requests.RequestException):
@@ -58,16 +57,16 @@ class LinkedIn:
             print(f"Error posting to LinkedIn: {e}")
 
 if __name__ == "__main__":
-    # Create an instance of the LinkedIn class
+    
     linkedin = LinkedIn()
 
-    # Check if the required argument is provided
+    
     if len(sys.argv) != 2:
         print("Usage: python script.py 'Text to post on LinkedIn'")
         sys.exit(1)
 
-    # Get text from command-line arguments
+    
     text = sys.argv[1]
 
-    # Post text on LinkedIn
+    
     linkedin.post(text)

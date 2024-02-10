@@ -6,9 +6,9 @@ import subprocess
 
 app = Flask(__name__)
 
-# Function to call initiate.py and pass prompt and intention arguments
+
 def call_initiate(prompt_of_user, intention):
-    # Command to run initiate.py with prompt and intention arguments
+
     cmd = ["python3", "initiate.py", prompt_of_user, intention]
     # Execute the command
     subprocess.run(cmd)
@@ -55,7 +55,7 @@ def process():
         schedule_posting(prompt_of_user, intention, days)
         return f"Successfully posted about {prompt_of_user} with {intention} on your LinkedIn.\nRemaining posts will be initiated at 8 AM every morning for {days - 1} days on your LinkedIn."
     else:
-        # For single post, call post() directly
+        
         message = post(prompt_of_user, intention, post_tenure)
         return message
 
@@ -65,8 +65,8 @@ def schedule_run():
         time.sleep(1)
 
 if __name__ == '__main__':
-    # Start the scheduling thread
+
     scheduling_thread = threading.Thread(target=schedule_run)
     scheduling_thread.start()
-    # Run the Flask app
+    
     app.run(debug=True)
